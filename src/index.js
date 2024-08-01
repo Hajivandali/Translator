@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Styles/index.css';
+import tailwind from './Styles/TailwindStyles.css';
 import Form from "./Component/Form"
 import reportWebVitals from './reportWebVitals';
 
