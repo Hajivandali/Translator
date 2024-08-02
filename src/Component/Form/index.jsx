@@ -36,18 +36,17 @@ const Translator = () => {
     setSourceLanguage(prev => prev === "fa" ? "en" : "fa");
     setTargetLanguage(prev => prev === "en" ? "fa" : "en");
   };
-  const ltr = ()=>{
-
-    
-  }
+  
   return (
+
     <div className="flex flex-col border-2 items-center p-6 bg-gray-50 rounded-lg shadow-lg max-w-lg mx-auto mt-10" >
       <button 
         className="px-6  py-2 mb-4 rounded-lg bg-gray-500 text-white font-semibold hover:bg-gray-600 transition duration-300 ease-in-out"
         onClick={switchLanguages}
       >
-        Switch Languages
+        Switch Languages to {targetLanguage}
       </button>
+
       <textarea className={`w-full h-32 p-3 border border-gray-300 rounded-lg mb-4 text-base ${sourceLanguage === 'fa' ? 'text-right' : 'text-left'}`}
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
