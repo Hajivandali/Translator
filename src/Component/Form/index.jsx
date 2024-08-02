@@ -47,10 +47,11 @@ const Translator = () => {
         Switch Languages to {targetLanguage}
       </button>
 
-      <textarea className={`w-full h-32 p-3 border border-gray-300 rounded-lg mb-4 text-base ${sourceLanguage === 'fa' ? 'text-right' : 'text-left'}`}
+      <textarea className={`w-full h-32 p-3 border border-gray-300 rounded-lg mb-4 text-base `}
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
-        placeholder="Enter text here..."
+        placeholder={sourceLanguage === 'fa' ? ' بنویسید' : 'Enter text here...'}
+        style={{ direction: sourceLanguage === 'fa' ? 'rtl' : 'ltr' }}
       />
       <p className="mt-2 text-lg">
         Translated Text:
